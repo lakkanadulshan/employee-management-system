@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Employee Portal - Login</title>
+  <link rel="stylesheet" href="./login.css" />
+  <!-- Google Font (Inter) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <main class="login-wrapper">
+    <div class="login-card">
+      
+      <!-- Header / Branding -->
+      <header class="login-header">
+        <div class="brand-badge">EMS</div>
+        <h1>Staff Portal</h1>
+        <p>Sign in with your employee credentials</p>
+      </header>
+
+      <!-- Login Form -->
+      <form class="login-form" action="#" method="POST">
+        
+        <!-- Employee ID or Work Email -->
+        <div class="form-group">
+          <label for="identifier">Employee Email</label>
+          <input 
+            type="text" 
+            id="identifier" 
+            [(ngModel)]="loginObj.username"
+            name="identifier" 
+            placeholder="e.g.name@company.com" 
+            required 
+            autocomplete="username"
+          />
+        </div>
+
+        <!-- Password -->
+        <div class="form-group">
+          <label for="password">Password</label>
+          <input 
+            type="password" 
+            id="password" 
+            [(ngModel)]="loginObj.password"
+            name="password" 
+            placeholder="Enter your password" 
+            required 
+            autocomplete="current-password"
+          />
+        </div>
+
+        <!-- Auxiliary Actions -->
+        <div class="form-options">
+          <label class="remember-me">
+            <input type="checkbox" name="remember" />
+            <span>Remember me</span>
+          </label>
+          <a href="#" class="forgot-link">Forgot password?</a>
+        </div>
+
+        <!-- Submit Button -->
+        <button type="button" (click)="onLogin()" class="btn-submit">Sign In</button>
+
+      </form>
+
+
+
+    </div>
+  </main>
+
+</body>
+</html>

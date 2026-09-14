@@ -1,0 +1,29 @@
+<div class="container">
+  <header class="d-flex justify-content-center py-3">
+    <ul class="nav nav-pills">
+      <li class="nav-item">
+        <a routerLink="/dashboard" routerLinkActive="active" class="nav-link" aria-current="page">Dashboard</a>
+      </li>
+      <li class="nav-item">
+        <a routerLink="/employee" routerLinkActive="active" class="nav-link">Employees</a>
+      </li>
+      <li class="nav-item">
+        <a routerLink="/project" routerLinkActive="active" class="nav-link">Projects</a>
+      </li>
+      <li class="nav-item">
+        <a routerLink="/project-employee" routerLinkActive="active" class="nav-link">Project Employees</a>
+      </li>
+    </ul>
+    <div>
+  <button type="button" class="btn-logoff" (click)="logoff()">
+    Logoff
+  </button>
+</div>
+  </header>
+</div>
+
+<div class="container">
+  <main>
+    <router-outlet></router-outlet>
+  </main>
+</div>
